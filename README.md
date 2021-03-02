@@ -61,7 +61,7 @@ spec:
 `Enforcement Points` are places where constraints can be enforced. 
 - [Git Hooks](https://git-scm.com/docs/githooks) 
 - [Kubernetes Admission Controllers](https://kubernetes.io/docs/reference/access-authn-authz/admission-controllers/)
-- Audit Systems
+- [Audit Systems](https://open-policy-agent.github.io/gatekeeper/website/docs/audit)
 
 
 ## Gatekeeper
