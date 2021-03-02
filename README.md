@@ -5,7 +5,7 @@ OPA decouples policy decision-making from policy enforcement.
 ## Constraint
 A `Constraint` crd is a declaration of the requirements the system are to meet.
 
-### Example 
+### Constraint Example 
 Require the system to enfore that all `Namespaces` have a label.
 ```yaml
 apiVersion: constraints.gatekeeper.sh/v1beta1
@@ -24,7 +24,7 @@ spec:
 ## Constraint Template
 A `ConstraintTemplate` crd is the declaration of new constraints along with input parameters and the enforcement logic written `Rego` scripting language.
 
-### Example
+### Constraint Template Example
 Declare the `Constraint` named K8sUniqueLabel with the logic to enforce the precence of labels for a given object/resource. 
 ```yaml
 apiVersion: templates.gatekeeper.sh/v1beta1
