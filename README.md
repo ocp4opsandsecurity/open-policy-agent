@@ -5,7 +5,8 @@ OPA decouples policy decision-making from policy enforcement.
 ## Constraint
 A `Constraint` crd is a declaration of the requirements the system are to meet.
 
-**Example:** Require the system to enfore that all `Namespaces` have a label.
+### Example 
+Require the system to enfore that all `Namespaces` have a label.
 ```yaml
 apiVersion: constraints.gatekeeper.sh/v1beta1
 kind: K8sUniqueLabel
@@ -23,7 +24,8 @@ spec:
 ## Constraint Template
 A `ConstraintTemplate` crd is the declaration of new constraints along with input parameters and the enforcement logic written `Rego` scripting language.
 
-**Example:** Declare the `Constraint` named K8sUniqueLabel with the logic to enforce the precence of labels for a given object/resource. 
+### Example
+Declare the `Constraint` named K8sUniqueLabel with the logic to enforce the precence of labels for a given object/resource. 
 ```yaml
 apiVersion: templates.gatekeeper.sh/v1beta1
 kind: ConstraintTemplate
@@ -65,14 +67,3 @@ spec:
 ## Gatekeeper
 `Gatekeeper` is uses a crd named `ConstraintTemplate`, which describes validation logic in the `Rego` scripting language and references the `Constrant` crd to enforces policy.
 
-
-
-apiVersion: constraints.gatekeeper.sh/v1beta1
-kind: FooSystemRequiredLabel
-metadata:
-  name: require-billing-label
-spec:
-  match:
-    namespace: ["expensive"]
-  parameters:
-    labels: ["billing"]
