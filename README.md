@@ -72,6 +72,4 @@ spec:
 - [Audit Systems](https://open-policy-agent.github.io/gatekeeper/website/docs/audit)
 
 
-## Gatekeeper
-`Gatekeeper` is a Kubernetes admission webhook which enforces policy.
 
