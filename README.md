@@ -3,7 +3,7 @@
 OPA decouples policy decision-making from policy enforcement. 
 
 ## Constraint
-A `Constraint` crd is a declaration of the requirements the system are to meet.
+Constraints are then used to inform Gatekeeper that the admin wants a ConstraintTemplate to be enforced by declaration of the requirements the system is to meet.
 
 ### Constraint Example 
 Require the system to enfore that all `Namespaces` have a label.
