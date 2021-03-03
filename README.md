@@ -65,5 +65,5 @@ spec:
 
 
 ## Gatekeeper
-`Gatekeeper` is uses a crd named `ConstraintTemplate`, which describes validation logic in the `Rego` scripting language and references the `Constrant` crd to enforces policy.
+`Gatekeeper` is a Kubernetes admission webhook which enforces policy.
 
