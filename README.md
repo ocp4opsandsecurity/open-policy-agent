@@ -21,6 +21,14 @@ spec:
     label: gatekeeper
 ```
 
+The `match` field defines the scope of objects to which a given constraint will be applied. It supports the following matchers:
+- `kinds` accepts a list of objects with apiGroups and kinds fields that list the groups/kinds of objects to which the constraint will apply. If multiple groups/kinds objects are specified, only one match is needed for the resource to be in scope.
+- `scope` accepts *, Cluster, or Namespaced which determines if cluster-scoped and/or namesapced-scoped resources are selected. (defaults to *)
+- `namespaces` is a list of namespace names. If defined, a constraint will only apply to resources in a listed namespace.
+- `excludedNamespaces` is a list of namespace names. If defined, a constraint will only apply to resources not in a listed namespace.
+- `labelSelector` is a standard Kubernetes label selector.
+- `namespaceSelector` is a standard Kubernetes namespace selector. If defined, make sure to add Namespaces to your configs.config.gatekeeper.sh object to ensure namespaces are synced into OPA. 
+
 ## Constraint Template
 A `ConstraintTemplate` crd is the declaration of new constraints along with input parameters and the enforcement logic written `Rego` scripting language.
 
